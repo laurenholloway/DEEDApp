@@ -1,0 +1,19 @@
+﻿@model IEnumerable<DEEDApp.Models.Table>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
+        <p>@Html.DisplayFor(modelItem => item.Details)</p>
+    }
+    
+</div>
+
+    @Html.ActionLink("Back to List", "Index")
+
